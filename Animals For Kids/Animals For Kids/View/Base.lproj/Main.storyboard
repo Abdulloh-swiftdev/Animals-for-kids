@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animals_For_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="fAL-kO-Fwk">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-aS-aQR" customClass="roundButtons" customModule="Animals_For_Kids" customModuleProvider="target">
+                                <rect key="frame" x="402" y="344" width="220" height="80"/>
+                                <color key="backgroundColor" red="0.98227781059999997" green="0.73329430819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3qf-Fw-FrT"/>
+                                    <constraint firstAttribute="width" constant="220" id="bPz-7B-DvG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="39"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.17833358612589331" green="0.1800992651964467" blue="0.1800992651964467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5m-Qa-2Ko"/>
+                                    <segue destination="QVS-vo-3YC" kind="show" identifier="chose" id="cs5-kM-QnU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press Button To Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWZ-oc-yuh">
+                                <rect key="frame" x="417" y="444" width="190" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9Z-2Z-vz7">
+                                <rect key="frame" x="394.5" y="230.5" width="235" height="58.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5B-hK-eD0">
+                                <rect key="frame" x="958" y="13" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="TMQ-zr-D6v"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZIu-Uu-0MI"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="soundOn"/>
+                                <connections>
+                                    <action selector="sound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WzX-v7-cgg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VRh-aS-aQR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8K5-YV-nWD"/>
+                            <constraint firstItem="CWZ-oc-yuh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8nw-aP-ibu"/>
+                            <constraint firstItem="K5B-hK-eD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="EpE-Hd-uXy"/>
+                            <constraint firstItem="fAL-kO-Fwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GZO-vs-WtM"/>
+                            <constraint firstItem="fAL-kO-Fwk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="HPE-It-3Ab"/>
+                            <constraint firstItem="VRh-aS-aQR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RCv-N5-k9A"/>
+                            <constraint firstItem="VRh-aS-aQR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SlH-eY-iC6"/>
+                            <constraint firstItem="fAL-kO-Fwk" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="Svh-mO-9H0"/>
+                            <constraint firstItem="VRh-aS-aQR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TLj-lb-mUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K5B-hK-eD0" secondAttribute="trailing" constant="16" id="j82-Ji-oVn"/>
+                            <constraint firstItem="VRh-aS-aQR" firstAttribute="top" secondItem="S9Z-2Z-vz7" secondAttribute="bottom" constant="55" id="jxQ-hw-KJc"/>
+                            <constraint firstItem="CWZ-oc-yuh" firstAttribute="top" secondItem="VRh-aS-aQR" secondAttribute="bottom" constant="20" id="m3g-ne-uif"/>
+                            <constraint firstItem="S9Z-2Z-vz7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ti7-jw-iMG"/>
+                            <constraint firstItem="fAL-kO-Fwk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tt3-pI-VTN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B7i-FO-7sw"/>
+                    <connections>
+                        <outlet property="soundOnOff" destination="K5B-hK-eD0" id="3sL-an-zoa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.21739130434784" y="133.33333333333334"/>
+        </scene>
+        <!--ChoseVC-->
+        <scene sceneID="YLi-va-Ada">
+            <objects>
+                <viewController id="QVS-vo-3YC" customClass="ChoseVC" customModule="Animals_For_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3aX-8d-0ML">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design" translatesAutoresizingMaskIntoConstraints="NO" id="SwJ-gH-soU">
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSW-Ae-CLd" customClass="roundButtons" customModule="Animals_For_Kids" customModuleProvider="target">
+                                <rect key="frame" x="30" y="334" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.98227781059999997" green="0.73329430819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ona-uD-11N"/>
+                                    <constraint firstAttribute="height" constant="60" id="qYs-g3-6zv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="DOMESTIC">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="choseBtnsWasPressed:" destination="QVS-vo-3YC" eventType="touchUpInside" id="37X-Oq-p6U"/>
+                                    <segue destination="Sq4-bx-9TR" kind="show" identifier="play" id="v8j-KE-l5s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cY-uC-sTZ" customClass="roundButtons" customModule="Animals_For_Kids" customModuleProvider="target">
+                                <rect key="frame" x="272" y="334" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.98227781059999997" green="0.73329430819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CZV-Lz-U50"/>
+                                    <constraint firstAttribute="width" constant="160" id="wzb-bn-1mu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="JUNGLE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="choseBtnsWasPressed:" destination="QVS-vo-3YC" eventType="touchUpInside" id="LGK-Ew-WmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haV-HB-Z28" customClass="roundButtons" customModule="Animals_For_Kids" customModuleProvider="target">
+                                <rect key="frame" x="514" y="334" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.98227781059999997" green="0.73329430819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="UNC-mZ-wFG"/>
+                                    <constraint firstAttribute="width" constant="160" id="o5z-uB-Ucd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <state key="normal" title="FOREST">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="choseBtnsWasPressed:" destination="QVS-vo-3YC" eventType="touchUpInside" id="cWY-RZ-UJy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRy-su-DmG">
+                                <rect key="frame" x="6" y="5" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Z30-L8-7l6"/>
+                                    <constraint firstAttribute="width" constant="50" id="h3g-WZ-sZz"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Untitled design-6_preview_rev_1"/>
+                                <connections>
+                                    <action selector="exitBtnWasPressed:" destination="QVS-vo-3YC" eventType="touchUpInside" id="Kfn-FK-Zxe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cZX-T9-SEr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SwJ-gH-soU" firstAttribute="top" secondItem="cZX-T9-SEr" secondAttribute="top" id="0hX-oV-LXr"/>
+                            <constraint firstItem="LSW-Ae-CLd" firstAttribute="leading" secondItem="cZX-T9-SEr" secondAttribute="leading" constant="30" id="1U6-yh-Yai"/>
+                            <constraint firstItem="9cY-uC-sTZ" firstAttribute="centerY" secondItem="3aX-8d-0ML" secondAttribute="centerY" id="3rb-WB-qdn"/>
+                            <constraint firstItem="cZX-T9-SEr" firstAttribute="trailing" secondItem="haV-HB-Z28" secondAttribute="trailing" constant="30" id="3w7-Zs-0Oj"/>
+                            <constraint firstItem="SwJ-gH-soU" firstAttribute="bottom" secondItem="3aX-8d-0ML" secondAttribute="bottom" id="9RP-sT-vcs"/>
+                            <constraint firstItem="9cY-uC-sTZ" firstAttribute="centerX" secondItem="3aX-8d-0ML" secondAttribute="centerX" id="Djg-bi-nkD"/>
+                            <constraint firstItem="haV-HB-Z28" firstAttribute="centerY" secondItem="3aX-8d-0ML" secondAttribute="centerY" id="EkW-ak-WM4"/>
+                            <constraint firstItem="YRy-su-DmG" firstAttribute="top" secondItem="cZX-T9-SEr" secondAttribute="top" constant="5" id="OcF-JK-Mq0"/>
+                            <constraint firstItem="SwJ-gH-soU" firstAttribute="leading" secondItem="3aX-8d-0ML" secondAttribute="leading" id="aAV-gg-fc0"/>
+                            <constraint firstItem="YRy-su-DmG" firstAttribute="leading" secondItem="cZX-T9-SEr" secondAttribute="leading" constant="6" id="gA7-h8-DzN"/>
+                            <constraint firstItem="SwJ-gH-soU" firstAttribute="trailing" secondItem="3aX-8d-0ML" secondAttribute="trailing" id="gDW-Hf-jht"/>
+                            <constraint firstItem="LSW-Ae-CLd" firstAttribute="centerY" secondItem="3aX-8d-0ML" secondAttribute="centerY" id="j99-up-Hd5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EmS-ko-nVu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txJ-n4-Ri8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="133"/>
+        </scene>
+        <!--PlayVC-->
+        <scene sceneID="ry1-LM-Va8">
+            <objects>
+                <viewController id="Sq4-bx-9TR" customClass="PlayVC" customModule="Animals_For_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J96-p3-8YM">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfg-7P-R6h">
+                                <rect key="frame" x="0.0" y="0.0" width="704" height="728"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zm-mm-gZc">
+                                <rect key="frame" x="6" y="5" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cCD-Fv-Egn"/>
+                                    <constraint firstAttribute="height" constant="50" id="nCx-z4-tKM"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Untitled design-6_preview_rev_1"/>
+                                <connections>
+                                    <action selector="exitBtnWasPressed:" destination="QVS-vo-3YC" eventType="touchUpInside" id="B7X-G2-DCN"/>
+                                    <action selector="exitBtnWasPressed:" destination="Sq4-bx-9TR" eventType="touchUpInside" id="MR1-t6-Xc2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐵" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7V-JN-wWQ">
+                                <rect key="frame" x="252" y="264" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8eT-KI-Uob"/>
+                                    <constraint firstAttribute="width" constant="200" id="qNQ-Xr-TMJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="170"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What animal is it?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b45-D1-FLE">
+                                <rect key="frame" x="234.5" y="221" width="235.5" height="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="tt7-IO-xcC">
+                                <rect key="frame" x="229.5" y="482" width="245" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNS-77-nDW">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                        <color key="backgroundColor" red="0.98227781059999997" green="0.73329430819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <state key="normal" title="Monky"/>
+                                        <connections>
+                                            <action selector="buttonWasPressed:" destination="Sq4-bx-9TR" eventType="touchUpInside" id="v4D-ht-ssH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtJ-sS-DTD">
+                                        <rect key="frame" x="145" y="0.0" width="100" height="45"/>
+                                        <color key="backgroundColor" red="0.98227781059999997" green="0.73329430819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="6DF-5T-j9n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                        <state key="normal" title="Pig"/>
+                                        <connections>
+                                            <action selector="buttonWasPressed:" destination="Sq4-bx-9TR" eventType="touchUpInside" id="2Lm-BA-7BO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5MM-Mj-5Qc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tt7-IO-xcC" firstAttribute="centerX" secondItem="J96-p3-8YM" secondAttribute="centerX" id="3HZ-x6-yHx"/>
+                            <constraint firstItem="wfg-7P-R6h" firstAttribute="leading" secondItem="5MM-Mj-5Qc" secondAttribute="leading" id="AMP-tz-2MN"/>
+                            <constraint firstItem="wfg-7P-R6h" firstAttribute="bottom" secondItem="5MM-Mj-5Qc" secondAttribute="bottom" id="G1N-8g-vPG"/>
+                            <constraint firstItem="K7V-JN-wWQ" firstAttribute="centerX" secondItem="J96-p3-8YM" secondAttribute="centerX" id="Gs9-4b-ijM"/>
+                            <constraint firstItem="b45-D1-FLE" firstAttribute="centerX" secondItem="J96-p3-8YM" secondAttribute="centerX" id="I9j-wx-saS"/>
+                            <constraint firstItem="5Zm-mm-gZc" firstAttribute="top" secondItem="5MM-Mj-5Qc" secondAttribute="top" constant="5" id="NVd-pF-uWx"/>
+                            <constraint firstItem="tt7-IO-xcC" firstAttribute="top" secondItem="K7V-JN-wWQ" secondAttribute="bottom" constant="18" id="NXK-hW-1Gg"/>
+                            <constraint firstItem="5Zm-mm-gZc" firstAttribute="leading" secondItem="5MM-Mj-5Qc" secondAttribute="leading" constant="6" id="RLx-4B-Nt9"/>
+                            <constraint firstItem="wfg-7P-R6h" firstAttribute="top" secondItem="5MM-Mj-5Qc" secondAttribute="top" id="etq-9s-02x"/>
+                            <constraint firstItem="K7V-JN-wWQ" firstAttribute="centerY" secondItem="J96-p3-8YM" secondAttribute="centerY" id="jat-JF-kBu"/>
+                            <constraint firstItem="wfg-7P-R6h" firstAttribute="trailing" secondItem="5MM-Mj-5Qc" secondAttribute="trailing" id="mGG-Bi-WTe"/>
+                            <constraint firstItem="K7V-JN-wWQ" firstAttribute="top" secondItem="b45-D1-FLE" secondAttribute="bottom" constant="5" id="vAb-C3-1gz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6WU-An-S3w"/>
+                    <connections>
+                        <outlet property="animal" destination="K7V-JN-wWQ" id="Erh-3q-3OD"/>
+                        <outlet property="backGroundImage" destination="wfg-7P-R6h" id="2TJ-oo-Ly1"/>
+                        <outlet property="button1" destination="pNS-77-nDW" id="lrS-9z-w9R"/>
+                        <outlet property="button2" destination="dtJ-sS-DTD" id="lcQ-TO-8OL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6KX-zL-1IG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825.81521739130437" y="940.57971014492762"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Untitled design" width="640" height="360"/>
+        <image name="Untitled design-6_preview_rev_1" width="83" height="83"/>
+        <image name="main" width="640" height="360"/>
+        <image name="soundOn" width="125" height="125"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
